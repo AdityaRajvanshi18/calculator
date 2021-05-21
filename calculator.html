@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main id="calc">
+            <div class="calc-container">
+                <div id="display">0</div>
+                <button type="button" class="top" name="clear" value="AC">AC</button>
+                <button type="button" class="top" name="sign" value="+/-">+/-</button>
+                <button type="button" class="top" name="percent" value="%">%</button>
+                <button type="button" class="right" name="divide" value="/" data-op>/</button>
+
+                <button type="button" name="one" value="1" data-number>1</button>
+                <button type="button" name="two" value="2" data-number>2</button>
+                <button type="button" name="three" value="3" data-number>3</button>
+                <button type="button" class="right" name="add" value="+" data-op>+</button>
+
+                <button type="button" name="four" value="4" data-number>4</button>
+                <button type="button" name="five" value="5" data-number>5</button>
+                <button type="button" name="six" value="6" data-number>6</button>
+                <button type="button" class="right" name="subtract" value="-" data-op>-</button>
+                
+                <button type="button" name="seven" value="7" data-number>7</button>
+                <button type="button" name="eight" value="8" data-number>8</button>
+                <button type="button" name="nine" value="9" data-number>9</button>
+                <button type="button" class="right" name="multiply" value="x" data-op>x</button>
+                
+                <button type="button" id="zero" name="zero" value="0" data-number>0</button>
+                <button type="button" name="decimal" value=".">.</button>
+                <button type="button" class="right" name="equals" value="=">=</button>
+            </div>
+        </main>
+    </body>
+    <script src="app.js"></script>
+</html>
