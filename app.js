@@ -26,7 +26,6 @@ signButton.addEventListener("click", changeSign);
 percentButton.addEventListener("click", makePercent);
 pointButton.addEventListener("click", concatPoint);
 
-
 function setOperation(operator){
     if(currOperation !== null){
         evaluate();
@@ -46,7 +45,7 @@ function evaluate(){
         return;
     }
     secondNum = display.textContent;
-    display.textContent = operate(currOperation, firstNum, secondNum);
+    display.textContent = roundResult(operate(currOperation, firstNum, secondNum));
     currOperation = null;
 }
 
