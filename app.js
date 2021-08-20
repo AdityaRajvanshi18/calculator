@@ -7,6 +7,8 @@ const signButton = document.querySelector("[name=sign]");
 const percentButton = document.querySelector("[name=percent]");
 const pointButton = document.querySelector("[name=decimal]");
 
+window.addEventListener('keydown', handleKeyboardInput)
+
 let firstNum = "";
 let secondNum = "";
 let currOperation = null;
@@ -57,11 +59,6 @@ function concatNumber(number){
     if(display.textContent === "0" || isResetScreen){
         emptyDisplay();
     }
-
-    //VERY TEMP SOLUTION FOR NO OVERFLOW
-    if(display.textContent.length > 6){
-        return;
-    }
     display.textContent += number;
 }
 
@@ -108,6 +105,21 @@ function divide(a,b){
     return a/b;
 }
 
+function handleKeyboardInput(e) {
+    if (e.key >= 0 && e.key <= 9)concatNumber(e.key)
+    if (e.key === '.') concatPoint()
+    if (e.key === '=' || e.key === 'Enter') evaluate()
+    if (e.key === 'Escape') clearDisplay()
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/')
+      setOperation(convertOperator(e.key))
+}
+function convertOperator(keyboardOperator) {
+    if (keyboardOperator === '/') return '÷'
+    if (keyboardOperator === '*') return '×'
+    if (keyboardOperator === '-') return '−'
+    if (keyboardOperator === '+') return '+'
+}
+
 function operate(op, a, b){
     a = Number(a);
     b = Number(b);
@@ -125,3 +137,4 @@ function operate(op, a, b){
             return divide(a,b);
     }
 }
+
