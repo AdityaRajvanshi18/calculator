@@ -32,13 +32,9 @@
 	text-shadow: 1.3px 1.3px #383838;
 	margin: 5px;
 	word-wrap: break-word;
-<<<<<<< HEAD
-	word-break: break-all;
-	text-align: right;
-=======
     	word-break: break-all;
     	text-align: right;
->>>>>>> e7342c17bff15ac8c6607b39a6c00857c069d817
+
 }
 
 #zero {
