@@ -57,11 +57,6 @@ function concatNumber(number){
     if(display.textContent === "0" || isResetScreen){
         emptyDisplay();
     }
-
-    //VERY TEMP SOLUTION FOR NO OVERFLOW
-    if(display.textContent.length > 6){
-        return;
-    }
     display.textContent += number;
 }
 
