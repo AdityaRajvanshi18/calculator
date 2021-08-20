@@ -22,7 +22,7 @@
 #display {
 	grid-column: 1 / -1;
 	background-color: #b2b9b7;
-	display: flex;
+	display: block;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: flex-end;
@@ -31,6 +31,9 @@
 	font-weight: initial;
 	text-shadow: 1.3px 1.3px #383838;
 	margin: 5px;
+	word-wrap: break-word;
+    	word-break: break-all;
+    	text-align: right;
 }
 
 #zero {
